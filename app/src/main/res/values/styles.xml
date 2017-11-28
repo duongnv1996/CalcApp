@@ -15,6 +15,7 @@
         <item name="android:textSize">@dimen/textsize</item>
         <item name="android:background">@drawable/circle_button_b</item>
         <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:foreground">?selectableItemBackground</item>
         <item name="android:textColor">#fff</item>
     </style>
 
@@ -34,6 +35,10 @@
         <item name="android:background">#000</item>
         <item name="android:layout_weight">1</item>
         <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="button.a">
+        <item name="android:foreground">?selectableItemBackground</item>
     </style>
 
 </resources>

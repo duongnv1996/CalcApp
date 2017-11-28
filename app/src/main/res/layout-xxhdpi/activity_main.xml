@@ -24,17 +24,19 @@
             android:gravity="bottom|right"
             android:text="0"
             android:textColor="#fff"
-            android:textSize="@dimen/textsize" />
+            android:textSize="60dp"
+            android:fontFamily="sans-serif-light"/>
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="40sp"
+            android:layout_height="50sp"
             android:background="#000"
             android:gravity="bottom|right"
             android:text="0"
             android:textColor="#fff"
-            android:textSize="@dimen/textsize" />
+            android:fontFamily="sans-serif-light"
+            android:textSize="30dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -80,7 +82,7 @@
                 <Button
                     style="@style/button"
                     android:background="@drawable/circle_button_g"
-                    android:onClick="onClear"
+                    android:onClick="onSetOperator"
                     android:text="÷" />
             </LinearLayout>
             <!--row1-->
