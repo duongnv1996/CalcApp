@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="com.lucky.mohcine.calcapp.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#000"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="90sp"
+            android:gravity="bottom|right"
+            android:text="0"
+            android:textColor="#fff"
+            android:textSize="@dimen/textsize" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="#000"
+            android:gravity="bottom|right"
+            android:text="0"
+            android:textColor="#fff"
+            android:textSize="@dimen/textsize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginLeft="6dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <!--row1-->
+            <LinearLayout style="@style/layout">
+
+                <Button
+                    android:id="@+id/button3"
+                    style="@style/button"
+                    android:background="@drawable/circle_button_v"
+                    android:onClick="onClear"
+                    android:text="c" />
+
+                <Button
+                    android:id="@+id/button"
+
+                    style="@style/button"
+                    android:onClick="onSetmins"
+                    android:text="+/-"
+                    android:background="@drawable/circle_button_v"
+                    android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button2"
+
+                    style="@style/button"
+                    android:background="@drawable/circle_button_v"
+                    android:onClick="onSetOperator"
+                    android:text="%"
+                    android:textSize="@dimen/textsize" />
+
+                <Button
+                    style="@style/button"
+                    android:background="@drawable/circle_button_g"
+                    android:onClick="onClear"
+                    android:text="÷" />
+            </LinearLayout>
+            <!--row1-->
+
+            <LinearLayout style="@style/layout">
+
+                <Button
+                    android:id="@+id/button6"
+                    style="@style/button"
+                    android:onClick="onSetNumbres"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/button5"
+                    style="@style/button"
+                    android:onClick="onSetNumbres"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/button4"
+                    style="@style/button"
+                    android:onClick="onSetNumbres"
+                    android:text="9" />
+
+                <Button
+                    style="@style/button"
+                    android:background="@drawable/circle_button_g"
+                    android:onClick="onSetOperator"
+                    android:text="x" />
+            </LinearLayout>
+            <!--row1-->
+
+            <LinearLayout style="@style/layout">
+
+                <Button
+                    android:id="@+id/button9"
+                    style="@style/button"
+                    android:onClick="onSetNumbres"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/button8"
+                    style="@style/button"
+                    android:onClick="onSetNumbres"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/button7"
+
+                    style="@style/button"
+                    android:onClick="onSetNumbres"
+                    android:text="6" />
+
+                <Button
+                    style="@style/button"
+                    android:background="@drawable/circle_button_g"
+                    android:onClick="onSetOperator"
+                    android:text="-" />
+            </LinearLayout>
+            <!--row1-->
+
+            <LinearLayout style="@style/layout">
+
+                <Button
+                    android:id="@+id/button12"
+                    style="@style/button"
+
+                    android:onClick="onSetNumbres"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/button11"
+                    style="@style/button"
+                    android:onClick="onSetNumbres"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/button10"
+                    style="@style/button"
+
+                    android:onClick="onSetNumbres"
+                    android:text="3" />
+
+                <Button
+                    style="@style/button"
+                    android:background="@drawable/circle_button_g"
+                    android:onClick="onSetOperator"
+                    android:text="+" />
+            </LinearLayout>
+            <!--row1-->
+
+            <LinearLayout style="@style/layout">
+
+                <Button
+                    android:id="@+id/button15"
+                    style="@style/button"
+
+                    android:background="@drawable/circle_button_p"
+                    android:onClick="onSetNumbres"
+                    android:text="0"
+                    android:layout_weight="0.7"
+                   />
+
+                <Button
+                    android:id="@+id/button13"
+                    style="@style/button"
+                    android:onClick="onSetNumbres"
+                    android:text="."
+                   />
+
+                <Button
+                    style="@style/button"
+                    android:background="@drawable/circle_button_g"
+                    android:onClick="clickEqual"
+                    android:text="=" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout style="@style/operator">
+
+                <Button
+                    android:id="@+id/button16"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dp"
+                    android:background="@drawable/circle_button_v"
+                    android:onClick="onSetOperator"
+                    android:text="/"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/operator">
+
+                <Button
+                    android:id="@+id/button17"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dp"
+                    android:background="@drawable/circle_button_v"
+                    android:onClick="onSetOperator"
+                    android:text="x"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/operator">
+
+                <Button
+                    android:id="@+id/button18"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dp"
+                    android:background="@drawable/circle_button_v"
+                    android:onClick="onSetOperator"
+                    android:text="-"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/operator">
+
+                <Button
+                    android:id="@+id/button19"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dp"
+                    android:background="@drawable/circle_button_v"
+                    android:onClick="onSetOperator"
+                    android:text="+"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/operator">
+
+                <Button
+                    android:id="@+id/btn_id"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dp"
+                    android:background="@drawable/circle_button_v"
+                    android:onClick="clickEqual"
+                    android:text="="
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
